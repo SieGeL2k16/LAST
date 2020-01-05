@@ -1,0 +1,150 @@
+-----------------------------------------------------------------------------
+           HISTORY FOR LASTCALLERS BY SIEGEL (tRSi/F-iNNOVATiON)
+-----------------------------------------------------------------------------
+
+V0.01  (03-20-95) - Initial Release, stores about 20 users and all records
+                    ever made in an Datafile. Faster than any other Last-
+                    callers-Util! First testing on hELL'S aNGEL.
+
+V0.02  (03-24-95) - Update for dEATH aNGEL - hELLS aNGEL BBS
+
+                   +Fixed a Problem with the detecting of the next date, now
+                    LastCallers recognizes correct all date-changings.
+
+                   +Fixed a bug which doesn't update the Alltime-Records &
+                    the Yesterday statistics correct...now fixed.
+
+V0.03  (03-25-95) - Next Update for dEATH aNGEL - hELLS aNGEL BBS
+
+                   +Fixed a bug in the Handling of Systemhacks/PW-Hacks, if
+                    a user enters more than one wrong PW, lASTCALLERS would
+                    skip this user and don't update the Datafile!
+
+                   +Added an Overview of the Action-Flags for Strider :)
+
+                   +Added a Skip-Option for a special user called : FAME,
+                    this is for testing supposes only (hi Strider) !
+
+V0.04  (04-23-95) - Next Update
+
+                   +Hopefully fixed the annoying 1071 Bug :(
+
+V0.05  (05-19-95) - Next Update. READ CAREFULLY !!!!!!!!!
+
+                   *AFTER SOME TESTINGS, I FOUND OUT THAT THE DATAFILE
+                    HAS INCORRECT VARIABLE-DEFINITIONS RESULTING IN WRONG
+                    CALCULATIONS! NOW CHANGED, BUT YOU *MUST* DELETE THE
+                    'S:LC_DATABASE' FILE, OTHERWISE UNKNOWN THINGS COULD
+                    HAPPEN IN FACT OF INCOMPATIBLE DATAFILES! SO PLEASE
+                    BEFORE STARTING IT, DELETE IT!
+
+                   +Fixed a little bug, which calculates the Up-/Dl-Files
+                    incorrect. Now LastCallers reads in the amount of files
+                    from UPLOADSTAT: / DOWNLOADSTAT: to get the right results.
+
+                   +Added the recognition of 'FAST LOCAL LOGIN'. In previous
+                    Versions this Type of login where recognized as a Modem-
+                    login (writes down the Baud-Rate instead of LOCL!). Now
+                    fixed.
+
+V0.051 (06-04-95) - Next Update
+
+                   +Added new Baudrates (31200,33600) to allow LastCallers
+                    to recognize the new US-Robotics Connect-Strings.
+
+V0.052 (06-06-95) - Internal update
+
+                   +Added the remaining Baudrates upto 230K cps, i think that
+                    should be enough..:)
+
+V0.53  (06-26-95) - Internal update
+
+                   +Rewritten the Load/Save functions, works now a little bit
+                    faster...
+
+                   +Found a bug when using Remote Login...LastCallers
+                    interprets it as local login, now only SYSOP & LOCAL
+                    logins are marked as LOCL.
+
+V0.54  (11-02-95) - Update
+
+                   -LastCallers wasn't able to set the 'H' Flag, now fixed.
+
+                   -Record-Bytes >9999KB where not displayed correctly, also
+                    fixed. Maybe the other records (Graphical displays etc.)
+                    where built in the future, be patient please :)
+
+V0.55  (02-09-96) - Small Update
+
+                   -Fixed some internal fakes, which may (but I'm not sure)
+                    crash your machine...Now rewritten, it should be now
+                    safe.
+
+                   -Changed the code to use the FAME.library, which produces
+                    less codesize. Also the Optimizeroption is removed for
+                    more security.
+
+V0.56  (03-03-96) - Next beta-update.
+
+                   *SUGGESTION FROM SCANDIC/DCN:
+                    LastCallers now supports an optional Header to write on
+                    Top of the Output. To use this, copy your Header-File to
+                    the Programdir of LastCallers and rename it to HEADER.TXT
+                    If not found, the standard display are used.
+
+V0.57  (08-14-96) - Small Beta-Update
+
+                   *SUGGESTION FROM VAMPIRE/TRSI:
+                    New Argument added: TELNET 
+                    If set, LastCallers will write 'INET' instead of the used
+                    baudrate in the bulletin. Simply set this argument in 
+                    every nodescript you use for Telnet access.
+
+V0.58  (08-20-96) - Bugfixing
+         
+                   *BUG-REPORT FROM MAGIC MAX/ETC:
+                    LastCallers crashes if you start it with a callers.log
+                    which doesn't exists. Now fixed, LastCallers tries to
+                    lock the according Clog for about 20 times, after this
+                    LastCallers give up and exits with an errormessage.
+
+V0.59  (09-06-96) - Bugfixing
+
+                   *BUG-REPORT FROM TURBO/NVX:
+                    LastCallers wasn't able to determine if the current
+                    caller is already stored, this may happen if you start
+                    LastCallers two times with the same callerslog. The result
+                    was the double entry in the bulletin/database. This is now
+                    fixed, LastCallers checks out the last stored entry with
+                    the current user to work on. The following things are
+                    checked: User-Handle, Node and Connection Time. If all of
+                    them are at the same values, this caller will be skipped
+                    and neither saved into the database nor shown in the
+                    bulletin.
+
+                   *SUGGESTION FROM ELGUN/DCN:
+                    LastCallers is now able to write a logfile containing
+                    Username, Logintime, Onlinetime and Nodenumber. The Logfile
+                    will be saved in PROGDIR:LastCallers.log. If you wish to
+                    use this option, add the Argument LOGFILE to your startup
+                    script. See docs for further details.
+
+V0.60  (08-15-97) - Small Update
+
+                   *SUGGESTION FROM RAMSES & PASO:
+                    During the new X2 Modem standard, I have added both 
+                    connect strings from X2 to allow LastCallers to identify
+                    these new connect messages. Thx to Ramses to give me
+                    the new strings, so I could support X2 easily!
+
+V0.61  (09-23-98) - Small update
+
+                    Added all possible connection strings for V.90 standard.
+                    Lastcallers should now detect almost ALL different connects
+                    correct.
+
+V0.70  (11-15-99) - Y2K Update....
+
+                   +During some Y2K tests FAME has some additional tags
+                    built-in, so I had to update the parser code a bit...;)
+-------------------------------------------------------------------[EOF]-----
